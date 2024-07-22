@@ -1,0 +1,60 @@
+.MainHeaderInfo_list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .Info_phone_number {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    span {
+      color: #000;
+      font-family: "Source Sans 3";
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 28.6px */
+      letter-spacing: 0.286px;
+    }
+  }
+  .Info_details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 243px;
+    margin-bottom: 224px;
+    .Info_details_list {
+      display: flex;
+      flex-direction: column;
+      .Info_details_headers {
+        display: flex;
+        flex-direction: column;
+        .Info_details_MainHeader {
+          color: #00aa4f;
+          font-family: "Source Sans 3";
+          font-size: 110px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 1.43px;
+        }
+        .Info_details_SecondHeader {
+          color: #000;
+          font-family: "Source Sans 3";
+          font-size: 46px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.23px;
+        }
+      }
+      .Info_details_button {
+        margin-top: 115px;
+      }
+    }
+    .Info_details_Contacts_list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px;
+  background: #f4f2c9;
+  .Header_list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .Header_Logo_item {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .Header_Navigation_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .Header_Navigation_list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .Header_Navigation_list_item {
+          margin-right: 56px;
+          a {
+            color: black;
+            font-family: "Source Sans 3";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.09px;
+          }
+        }
+      }
+      .Header_Language_list {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        .Header_Language_item {
+          display: flex;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+          .Language_arrow_down {
+            width: 15px;
+            height: 15px;
+            transition: all 1s ease;
+          }
+          .open {
+            transform: rotate(180deg);
+          }
+          .Dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            .Dropdown li {
+              padding: 0.5rem;
+              cursor: pointer;
+              &:hover {
+                background: #f0f0f0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
