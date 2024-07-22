@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import "./Header.scss";
 import logo from "/logo.svg";
@@ -7,20 +7,53 @@ import MainHeader from "./MainHeader/MainHeader";
 
 const languages = ["en", "ua"];
 
+function LanguageDropdown({ selectedLanguage, selectLanguage, isOpen, toggleDropdown }) {
+  return (
+    <li className="Header_Language_item">
+      <div onClick={toggleDropdown}>
+        {selectedLanguage}
+        <img
+          src={arrow_down}
+          alt="Arrow down"
+          className={`Language_arrow_down ${isOpen ? "open" : ""}`}
+        />
+      </div>
+      {isOpen && (
+        <ul className="Dropdown">
+          {languages.map((language) => (
+            <li
+              key={language}
+              onClick={(e) => {
+                e.stopPropagation();
+                selectLanguage(language);
+              }}
+            >
+              {language}
+            </li>
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+}
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("ua");
   const { t, i18n } = useTranslation("header");
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleDropdown = useCallback(() => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  }, []);
 
-  const selectLanguage = (language) => {
-    setSelectedLanguage(language);
-    i18n.changeLanguage(language);
-    setIsOpen(false);
-  };
+  const selectLanguage = useCallback(
+    (language) => {
+      setSelectedLanguage(language);
+      i18n.changeLanguage(language);
+      setIsOpen(false);
+    },
+    [i18n]
+  );
 
   return (
     <header>
@@ -47,23 +80,12 @@ export default function Header() {
             </li>
           </ul>
           <ul className="Header_Language_list">
-            <li className="Header_Language_item" onClick={toggleDropdown}>
-              {selectedLanguage}
-              <img
-                src={arrow_down}
-                alt="Arrow down"
-                className={`Language_arrow_down ${isOpen ? "open" : ""}`}
-              />
-              {isOpen && (
-                <ul className="Dropdown">
-                  {languages.map((language) => (
-                    <li key={language} onClick={() => selectLanguage(language)}>
-                      {language}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
+            <LanguageDropdown
+              selectedLanguage={selectedLanguage}
+              selectLanguage={selectLanguage}
+              isOpen={isOpen}
+              toggleDropdown={toggleDropdown}
+            />
           </ul>
         </li>
       </ul>
