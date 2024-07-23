@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import "./Header.scss";
 import logo from "/logo.svg";
@@ -7,10 +8,15 @@ import MainHeader from "./MainHeader/MainHeader";
 
 const languages = ["en", "ua"];
 
-function LanguageDropdown({ selectedLanguage, selectLanguage, isOpen, toggleDropdown }) {
+function LanguageDropdown({
+  selectedLanguage,
+  selectLanguage,
+  isOpen,
+  toggleDropdown,
+}) {
   return (
     <li className="Header_Language_item">
-      <div onClick={toggleDropdown}>
+      <div onClick={toggleDropdown} className="Header_Language_container">
         {selectedLanguage}
         <img
           src={arrow_down}
@@ -38,9 +44,14 @@ function LanguageDropdown({ selectedLanguage, selectLanguage, isOpen, toggleDrop
 }
 
 export default function Header() {
+  const savedLanguage = Cookies.get("selectedLanguage") || "ua";
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("ua");
+  const [selectedLanguage, setSelectedLanguage] = useState(savedLanguage);
   const { t, i18n } = useTranslation("header");
+
+  useEffect(() => {
+    i18n.changeLanguage(savedLanguage);
+  }, [i18n, savedLanguage]);
 
   const toggleDropdown = useCallback(() => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
@@ -50,6 +61,7 @@ export default function Header() {
     (language) => {
       setSelectedLanguage(language);
       i18n.changeLanguage(language);
+      Cookies.set("selectedLanguage", language, { expires: 7 });
       setIsOpen(false);
     },
     [i18n]

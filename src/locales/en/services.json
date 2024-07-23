@@ -1,0 +1,30 @@
+{
+  "servicesHeader": "what services we provide",
+  "servicesContainer": [
+    {
+      "containerHeader": "signing a declaration with a family doctor",
+      "containerInfo": "here you can choose a family doctor and sign a declaration with them according to the primary health care service package from the national health service of ukraine (nhsu)."
+    },
+    {
+      "containerHeader": "doctor consultations",
+      "containerInfo": "here you can get a consultation from a doctor in any way (visit the office, via telecommunication, home visit, after hours)."
+    },
+    {
+      "containerHeader": "diagnostics and prevention",
+      "containerInfo": "here you can check your general health condition (ecg, eye exam, body mass index, glucose, cholesterol, spirometry, and more)."
+    },
+    {
+      "containerHeader": "psychologist consultation",
+      "containerInfo": "here you can choose a psychologist and get a consultation, undergo diagnostics, and receive support."
+    },
+    {
+      "containerHeader": "group sessions",
+      "containerInfo": "here you can join psychological support and self-help groups (average group size is 8 people)."
+    },
+    {
+      "containerHeader": "consulting and education",
+      "containerInfo": "here you can choose our public health team to conduct educational events and workshops for a specific group of people."
+    }
+  ],
+  "servicesButton": "more details"
+}

@@ -44,10 +44,14 @@ header {
           align-items: center;
           position: relative;
           cursor: pointer;
-          .Language_arrow_down {
-            width: 15px;
-            height: 15px;
-            transition: all 1s ease;
+          .Header_Language_container {
+            display: flex;
+            align-items: center;
+            .Language_arrow_down {
+              width: 15px;
+              height: 15px;
+              transition: all 1s ease;
+            }
           }
           .open {
             transform: rotate(180deg);
