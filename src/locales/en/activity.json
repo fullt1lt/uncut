@@ -1,0 +1,52 @@
+{
+  "activityHeader": "our activities",
+  "activityContainer": [
+    {
+      "activityHeader": "medicine",
+      "activityInfo": [
+        "signing declarations with a family doctor",
+        "individual consultations",
+        "prevention",
+        "consultations with an internist",
+        "online consultations",
+        "home visits",
+        "laboratory and instrumental diagnostics",
+        "vaccination",
+        "medical support"
+      ]
+    },
+    {
+      "activityHeader": "psychology",
+      "activityInfo": [
+        "individual consultations",
+        "support groups",
+        "online consultations",
+        "providing first psychological aid",
+        "laboratory and instrumental diagnostics",
+        "art therapy",
+        "thematic groups"
+      ]
+    },
+    {
+      "activityHeader": "education",
+      "activityInfo": [
+        "practice for psychology faculty students",
+        "continuous development of doctors 'peer groups'",
+        "training workshops",
+        "career orientation events",
+        "educational activities"
+      ]
+    },
+    {
+      "activityHeader": "consulting",
+      "activityInfo": [
+        "consulting businesses, NGOs, charitable foundations, local governments on ensuring physical, mental, and social health of staff",
+        "participating as a speaker at conferences",
+        "participating as an expert in discussion panels",
+        "engaging in strategic sessions"
+      ]
+    }
+  ],
+  "activityImage": "en",
+  "activityInfo": "our center is available to you at any time when you need help or consultation. we strive to be there for you at any moment of your life so that you can always feel support and confidence in your health."
+}

@@ -1,8 +1,8 @@
 import MainButton from "../../MainButton/MainButton";
 import "./MainHeader.scss";
-import telegram from "/icon/telegram.svg";
-import instagram from "/icon/instagram.svg";
-import youtube from "/icon/youtube.svg";
+import telegram from "../../../assets/icon/telegram.svg";
+import instagram from "../../../assets/icon/instagram.svg";
+import youtube from "../../../assets/icon/youtube.svg";
 import { useTranslation } from "react-i18next";
 
 export default function MainHeader() {

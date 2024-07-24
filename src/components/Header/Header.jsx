@@ -2,8 +2,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import Cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import "./Header.scss";
-import logo from "/logo.svg";
-import arrow_down from "/icon/down-arrow.png";
+import logo from "../../assets/logo.svg";
+import arrow_down from "../../assets/icon/down-arrow.png";
 import MainHeader from "./MainHeader/MainHeader";
 
 const languages = ["en", "ua"];
