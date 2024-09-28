@@ -2,6 +2,7 @@ import Activity from "./components/Activity/Activity";
 import Services from "./components/Services/Services";
 import Values from "./components/Values/Values";
 import "./Main.scss";
+// import TestComponent from "./test";
 
 export default function Main() {
   return (

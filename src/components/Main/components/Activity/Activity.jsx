@@ -2,10 +2,11 @@ import "./Activity.scss";
 import { useTranslation } from "react-i18next";
 import activity_ua from "../../../../assets/icon/activity_ua.svg";
 import activity_en from "../../../../assets/icon/activity_en.svg";
+import ActivityContainer from "./components/Activity_Container";
 
 export default function Activity() {
   const { t } = useTranslation("activity");
-  const activityContainer = t("activityContainer", { returnObjects: true });
+  // const activityContainer = t("activityContainer", { returnObjects: true });
   return (
     <>
       <section className="Main_Activity">
@@ -14,18 +15,7 @@ export default function Activity() {
             <h1 className="ActivityHeader">{t("activityHeader")}</h1>
           </li>
         </ul>
-        <ul className="Activity_Container">
-          {activityContainer.map((item, index) => (
-            <li key={index} className="Activity_Container_Item">
-              <h2 className="ContainerHeader">{item.activityHeader}</h2>
-              {item.activityInfo.map((infoItem, infoIndex) => (
-                <p key={infoIndex} className="ContainerInfo">
-                  - {infoItem}
-                </p>
-              ))}
-            </li>
-          ))}
-        </ul>
+        <ActivityContainer/>
         <ul className="Activity_Info_list">
           <li className="Activity_Info_item_Image">
             <img
