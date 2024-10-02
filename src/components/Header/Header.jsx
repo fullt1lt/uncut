@@ -5,6 +5,7 @@ import "./Header.scss";
 import logo from "../../assets/logo.svg";
 import arrow_down from "../../assets/icon/down-arrow.png";
 import MainHeader from "./MainHeader/MainHeader";
+import { Link } from "react-router-dom";
 
 const languages = ["en", "ua"];
 
@@ -71,7 +72,9 @@ export default function Header() {
     <header>
       <ul className="Header_list">
         <li className="Header_Logo_item">
-          <img src={logo} alt="Logo" />
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </li>
         <li className="Header_Navigation_item">
           <ul className="Header_Navigation_list">

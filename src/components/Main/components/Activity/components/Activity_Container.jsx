@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 
+
 export default function ActivityContainer() {
-  const [category, setCategory] = useState(null);
+  const [category, setCategory] = useState([]);
   const savedLanguage = Cookies.get("selectedLanguage") || "ua";
+
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/servise-category/")
+      .get("http://127.0.0.1:8000/api/category-activity/")
       .then((response) => {
-          setCategory(response.data);
+        setCategory(response.data);
       })
       .catch((error) => {
         console.error(
@@ -17,9 +19,16 @@ export default function ActivityContainer() {
           error
         );
       });
-  }, []);
+  }, [savedLanguage]);
 
-  if (!category) {
+  const cleanText = (text) => {
+    return text
+      .split("-")
+      .filter(Boolean)
+      .map((item) => item.trim());
+  };
+
+  if (!category.length) {
     return <div>Loading...</div>;
   }
 
@@ -28,13 +37,16 @@ export default function ActivityContainer() {
       {category.map((categoryItem, index) => (
         <li key={index} className="Activity_Container_Item">
           <h2 className="ContainerHeader">
-            {savedLanguage === "en" ? categoryItem.title_en : categoryItem.title_uk}
+            {savedLanguage === "en"
+              ? categoryItem.title_en
+              : categoryItem.title_uk}
           </h2>
-          {categoryItem.procedures.map((procedure, procedureIndex) => (
-            <p key={procedureIndex} className="ContainerInfo">
-              - {savedLanguage === "en" ? procedure.name_en : procedure.name_uk}
-            </p>
-          ))}
+            {(savedLanguage === "en"
+              ? cleanText(categoryItem.procedures[0].text_en)
+              : cleanText(categoryItem.procedures[0].text_uk)
+            ).map((item, i) => (
+              <p key={i} className="ContainerInfo">- {item}</p>
+            ))}
         </li>
       ))}
     </ul>
