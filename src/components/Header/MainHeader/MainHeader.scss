@@ -55,6 +55,17 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      .Info_details_Contacts_item {
+        a {
+          img {
+            margin-right: 56px;
+            cursor: pointer;
+          }
+          .Last_image {
+            margin-right: 0;
+          }
+        }
+      }
     }
   }
 }

@@ -1,5 +1,4 @@
-.Main_Services {
-  // width: 80%;
+.Main_Team {
   display: flex;
   flex-direction: column;
   padding: 80px;
@@ -7,14 +6,16 @@
   font-family: "Source Sans 3";
   font-style: normal;
   font-weight: 400;
-  .Main_Services_Header_List {
+  width: 100%;
+  box-sizing: border-box;
+  .Main_Team_Header_List {
     width: 70%;
     display: flex;
     align-items: flex-start;
-    .Main_Services_Header_item {
+    .Main_Team_Header_item {
       width: 100%;
       display: flex;
-      .ServicesHeader {
+      .TeamHeader {
         color: #000;
         font-family: "Source Sans 3";
         font-size: 70px;
@@ -25,38 +26,55 @@
       }
     }
   }
-  .Services_Container {
-    width: 100%;
+  .Team_Container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
     margin-top: 40px;
-    .Services_Container_Item {
+    width: 100%;
+    gap: 10px;
+    box-sizing: border-box;
+    .Team_Container_Item {
+      padding: 16px;
       display: flex;
       flex-direction: column;
-      padding: 16px;
-      width: 30%;
+      max-width: 305px;
       justify-content: space-between;
       align-items: flex-start;
-      color: #000;
-      font-family: "Source Sans 3";
-      font-style: normal;
       border-radius: 16px;
       background: #f4f2c9;
-      .ContainerHeader {
+      .Conteiner_Doctor_photo {
+        width: 100%;
+        height: 270px;
+        .Doctor_photo {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .Doctor_name {
+        margin-top: 12px;
+        color: #000;
+        font-family: "Source Sans 3";
         font-size: 26px;
+        font-style: normal;
         font-weight: 700;
         line-height: 130%; /* 33.8px */
         letter-spacing: 0.338px;
+        text-transform: capitalize;
       }
-      .ContainerInfo {
-        margin: 12px 0 12px;
+      .Doctor_specialization {
+        color: #000;
+        font-family: "Source Sans 3";
         font-size: 22px;
+        font-style: normal;
         font-weight: 400;
         line-height: 130%; /* 28.6px */
         letter-spacing: 0.286px;
-        min-height: 116px;
+        text-transform: lowercase;
+      }
+      .DetailButton {
+        margin-top: 12px;
       }
     }
   }

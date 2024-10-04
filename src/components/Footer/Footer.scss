@@ -1,0 +1,95 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px;
+  background: #f4f2c9;
+  .Footer_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    .Footer_Logo_item {
+      display: flex;
+      .Footer_Logo_item_list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .Footer_Logo_item_Info {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          .Footer_logo {
+            width: 140px;
+            height: 134px;
+            margin-right: 16px;
+          }
+          .Footer_Details_list {
+            display: flex;
+            flex-direction: column;
+            .Footer_Details_item {
+              display: flex;
+              .Footter_Details_Nezkrayu {
+                color: #00aa4f;
+                font-family: "Source Sans 3";
+                font-size: 110px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1.43px;
+                margin-bottom: -32px;
+              }
+              .Footter_Details_Text {
+                color: #000;
+                font-family: "Source Sans 3";
+                font-size: 46px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.23px;
+              }
+            }
+          }
+        }
+        .Footer_Logo_item_social_accounts {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .Info_details_Contacts_list {
+            display: flex;
+            justify-content: space-around;
+            .Info_details_Contacts_item {
+              a {
+                img {
+                  margin-right: 56px;
+                  cursor: pointer;
+                }
+                .Last_image {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .Footer_info_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
+    .Footer_info_Item {
+      span {
+        color: #000;
+        text-align: center;
+        font-family: "Source Sans 3";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.08px;
+      }
+    }
+  }
+}

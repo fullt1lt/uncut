@@ -1,8 +1,8 @@
 import Activity from "./components/Activity/Activity";
 import Services from "./components/Services/Services";
 import Values from "./components/Values/Values";
+import Team from "./components/Team/Team";
 import "./Main.scss";
-// import TestComponent from "./test";
 
 export default function Main() {
   return (
@@ -10,6 +10,7 @@ export default function Main() {
       <Values />
       <Services />
       <Activity />
+      <Team />
     </main>
   );
 }

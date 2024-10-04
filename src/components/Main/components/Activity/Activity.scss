@@ -14,8 +14,12 @@
       width: 100%;
       display: flex;
       .ActivityHeader {
+        color: #000;
+        font-family: "Source Sans 3";
         font-size: 70px;
-        line-height: 130%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 91px */
         letter-spacing: 0.91px;
       }
     }

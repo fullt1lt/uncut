@@ -26,13 +26,19 @@ export default function MainHeader() {
         </ul>
         <ul className="Info_details_Contacts_list">
           <li className="Info_details_Contacts_item">
-            <img src={telegram} alt="" />
+            <a href="#">
+              <img src={telegram} alt="" />
+            </a>
           </li>
           <li className="Info_details_Contacts_item">
-            <img src={instagram} alt="" />
+            <a href="#">
+              <img src={instagram} alt="" />
+            </a>
           </li>
           <li className="Info_details_Contacts_item">
-            <img src={youtube} alt="" />
+            <a href="#">
+              <img src={youtube} alt="" className="Last_image" />
+            </a>
           </li>
         </ul>
       </li>
